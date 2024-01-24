@@ -2,11 +2,12 @@
 const PROXY_CONFIG = [
   {
       context: [
+        '/api/**',
+        '!**/api/shmaybe/**'
       ],
-      target: tokens.Target,
+      target: 'http://localhost:3000',
       secure: false,
       changeOrigin: true,
-      headers: tokenHeaders,
       logLevel: 'debug',
   },
 ]
